@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кухни и мебель на заказ — проект, изготовление, установка</title>
+  <meta name="description" content="Кухни, витрины, пеналы и другая мебель на заказ. Замер, проект, изготовление и установка под ваши размеры. Посмотрите наши работы и рассчитайте стоимость.">
+  <meta name="theme-color" content="#14110e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Кухни и мебель на заказ — точно по вашим размерам">
+  <meta property="og:description" content="Проектируем, изготавливаем и устанавливаем кухни и мебель на заказ. Смотрите наши работы.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314110e'/%3E%3Crect x='7' y='7' width='8' height='18' rx='1.5' fill='none' stroke='%23d9a45f' stroke-width='2'/%3E%3Crect x='17' y='7' width='8' height='18' rx='1.5' fill='none' stroke='%23d9a45f' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+  <!-- Напоминание, пока не заполнен config.js. Исчезает само, когда впишете телефон или WhatsApp. -->
+  <div class="draft-bar" id="draftBar" hidden>
+    <span>Черновик: впишите телефон и WhatsApp в файле <b>config.js</b> — и эта полоска исчезнет.</span>
+    <button type="button" aria-label="Скрыть">×</button>
+  </div>
+
+  <header class="header" id="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="На главную">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="30" height="30"><rect x="6" y="6" width="9" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="6" width="9" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <span class="brand-name" data-brand>Мебель на заказ</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#services">Что делаем</a>
+        <a href="#works">Наши работы</a>
+        <a href="#process">Как работаем</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contact">Контакты</a>
+        <a class="btn btn-accent nav-cta" href="#contact">Рассчитать стоимость</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Первый экран ===== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span>Мебель на заказ</span><span class="eyebrow-dot" aria-hidden="true"></span><span data-city>Кухни, витрины, пеналы</span></p>
+          <h1>Кухни и мебель на заказ&nbsp;— <em>точно по вашим размерам</em></h1>
+          <p class="lead">Проектируем, изготавливаем и устанавливаем мебель, которая подходит вашей комнате и вашему образу жизни. От замера до установки — всё в одних руках.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-accent btn-lg" href="#contact">Рассчитать стоимость</a>
+            <a class="btn btn-ghost btn-lg" href="#works">Смотреть работы</a>
+          </div>
+
+          <ul class="hero-points">
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Замер и расчёт стоимости</li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Проект до начала работ</li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Доставка и установка</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="slider" id="heroSlider" aria-roledescription="карусель" aria-label="Примеры наших кухонь">
+            <figure class="slide is-active">
+              <img src="images/emerald-gold.jpg" width="900" height="1600" alt="Кухня изумрудного цвета с золотой отделкой и высокой витриной с подсветкой" style="object-position:40% 50%">
+              <figcaption>Изумруд и золото</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="images/mocha-oak-showcase.jpg" width="1600" height="1200" alt="Угловая кухня цвета мокко с большой дубовой витриной с подсветкой" style="object-position:18% 50%" loading="lazy">
+              <figcaption>Мокко и дуб</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="images/deep-blue-classic.jpg" width="1600" height="1200" alt="Угловая кухня глубокого синего цвета с рифлёными фасадами и стеклянным фризом под потолком" style="object-position:30% 50%" loading="lazy">
+              <figcaption>Глубокий синий</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="images/graphite-showcase-tower.jpg" width="960" height="1280" alt="Графитовый пенал-витрина с подсветкой и встроенным холодильником" loading="lazy">
+              <figcaption>Пенал-витрина с подсветкой</figcaption>
+            </figure>
+            <div class="slider-dots" role="group" aria-label="Выбор фото"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Что делаем ===== -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Что мы делаем</p>
+          <h2>Мебель, сделанная <em>под ваш дом</em></h2>
+          <p class="section-lead">Каждый проект — индивидуальный. Мы не берём готовые модули: измеряем помещение, рисуем проект и изготавливаем мебель по вашим размерам.</p>
+        </header>
+
+        <div class="bento">
+          <a class="tile tile-a reveal" href="#contact" data-pick="Кухня">
+            <img src="images/long-grey-cream-marble.jpg" width="1600" height="1200" alt="Прямая кухня в сером и кремовом цвете с мраморным фартуком и витриной" loading="lazy">
+            <div class="tile-body">
+              <span class="tile-tag">Основное направление</span>
+              <h3>Кухни на заказ</h3>
+              <p>Прямые, угловые и П-образные. Подберём планировку под ваше пространство и заранее встроим любую технику.</p>
+              <span class="tile-link">Рассчитать кухню <i aria-hidden="true">→</i></span>
+            </div>
+          </a>
+
+          <a class="tile tile-b reveal" href="#contact" data-pick="Витрина / пенал" style="--d:.08s">
+            <img src="images/graphite-showcase-tower.jpg" width="960" height="1280" alt="Высокий графитовый шкаф-витрина со стеклом и тёплой подсветкой" loading="lazy" style="object-position:50% 30%">
+            <div class="tile-body">
+              <h3>Витрины и пеналы</h3>
+              <p>Стекло в тонкой чёрной рамке и мягкая LED-подсветка — для посуды, коллекций и техники.</p>
+            </div>
+          </a>
+
+          <a class="tile tile-c reveal" href="#contact" data-pick="Кухня" style="--d:.16s">
+            <img src="images/classic-gold-patina.jpg" width="1600" height="1200" alt="Классическая кухня с фрезерованными фасадами и золотой патиной" loading="lazy">
+            <div class="tile-body">
+              <h3>Классические фасады</h3>
+              <p>Фрезеровка, патина, золотой декор, карнизы и колонны.</p>
+            </div>
+          </a>
+
+          <a class="tile tile-d reveal" href="#contact" data-pick="Другая мебель">
+            <div class="tile-d-text">
+              <h3>Другая мебель на заказ</h3>
+              <p>Шкафы, прихожие, гардеробные и другая корпусная мебель — по вашим размерам и в нужном цвете.</p>
+            </div>
+            <span class="btn btn-accent">Обсудить задачу</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Почему мы ===== -->
+    <section class="section section-dark" id="why">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Почему выбирают нас</p>
+          <h2>Мелочи, из которых складывается <em>удобная кухня</em></h2>
+        </header>
+
+        <ul class="why-grid">
+          <li class="why reveal">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 22l18-18 6 6L10 28H4v-6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 9l6 6M11 15l3 3M14 12l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <h3>Точно по вашим размерам</h3>
+            <p>Мебель делается под вашу комнату: неровные стены, ниши, окна и трубы не помеха. Никакого «почти подошло».</p>
+          </li>
+          <li class="why reveal" style="--d:.06s">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="11" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="21" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="21" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <h3>Любой стиль и цвет</h3>
+            <p>От графита и белого глянца до изумрудного и синего. Покажем образцы и поможем собрать сочетание.</p>
+          </li>
+          <li class="why reveal" style="--d:.12s">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4a8 8 0 00-4.5 14.6c.9.7 1.5 1.6 1.5 2.7V22h6v-.7c0-1.1.6-2 1.5-2.7A8 8 0 0016 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 26h6M14 29h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <h3>Продуманная подсветка</h3>
+            <p>LED в нишах, под шкафами и внутри витрин: кухня выглядит дороже, а работать на ней удобнее.</p>
+          </li>
+          <li class="why reveal">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="3" width="20" height="26" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 12h20" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="21" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="7.5" r=".9" fill="currentColor"/></svg>
+            <h3>Встроенная техника</h3>
+            <p>Заранее проектируем места под духовку, холодильник, посудомойку и вытяжку, чтобы всё встало ровно.</p>
+          </li>
+          <li class="why reveal" style="--d:.06s">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 3h12l5 5v21H8V3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M20 3v5h5M12 15h9M12 20h9M12 25h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <h3>Понятная смета и договор</h3>
+            <p>Стоимость, материалы и сроки фиксируем в договоре до начала работ. Вы знаете, за что платите.</p>
+          </li>
+          <li class="why reveal" style="--d:.12s">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 9h16v13H3zM19 13h6l4 4v5H19z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="9" cy="24" r="2.5" fill="var(--ink)" stroke="currentColor" stroke-width="1.6"/><circle cx="24" cy="24" r="2.5" fill="var(--ink)" stroke="currentColor" stroke-width="1.6"/></svg>
+            <h3>Доставка и установка</h3>
+            <p>Привезём, соберём и аккуратно установим. Вы принимаете уже готовую мебель.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Наши работы ===== -->
+    <section class="section" id="works">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Наши работы</p>
+          <h2>Реальные кухни, <em>которые мы сделали</em></h2>
+          <p class="section-lead">Нажмите на фото, чтобы рассмотреть подробнее. Понравилось что-то похожее — отправьте нам снимок, и мы сделаем так же или лучше.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Фильтр работ">
+          <button type="button" class="chip is-active" data-filter="all">Все</button>
+          <button type="button" class="chip" data-filter="modern">Современные</button>
+          <button type="button" class="chip" data-filter="classic">Классика</button>
+          <button type="button" class="chip" data-filter="color">Яркие цвета</button>
+          <button type="button" class="chip" data-filter="light">Витрины и подсветка</button>
+        </div>
+
+        <ul class="gallery" id="gallery">
+          <li class="work" data-tags="modern light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Графит и белый глянец">
+              <img src="images/graphite-white-gloss.jpg" width="1280" height="960" loading="lazy" alt="Кухня в графитовом цвете и белом глянце с подсвеченными нишами из дуба">
+            </button>
+            <h3>Графит и белый глянец</h3><p>Прямая кухня · подсветка ниш</p>
+          </li>
+          <li class="work" data-tags="modern">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Графит и матовый белый">
+              <img src="images/graphite-matte-white.jpg" width="960" height="1280" loading="lazy" alt="Прямая кухня с матовыми белыми верхними и графитовыми нижними шкафами">
+            </button>
+            <h3>Графит и матовый белый</h3><p>Прямая кухня · чёрная фурнитура</p>
+          </li>
+          <li class="work" data-tags="classic color light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Глубокий синий">
+              <img src="images/deep-blue-classic.jpg" width="1600" height="1200" loading="lazy" alt="Угловая кухня глубокого синего цвета с белыми рифлёными фасадами и подсвеченным стеклянным фризом">
+            </button>
+            <h3>Глубокий синий</h3><p>Угловая кухня · рифлёные фасады · стеклянный фриз</p>
+          </li>
+          <li class="work" data-tags="modern light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Мокко и дуб">
+              <img src="images/mocha-oak-showcase.jpg" width="1600" height="1200" loading="lazy" alt="Угловая кухня цвета мокко с высоким подсвеченным шкафом-витриной из дуба и золотыми вставками">
+            </button>
+            <h3>Мокко и дуб</h3><p>Угловая кухня · высокая витрина</p>
+          </li>
+          <li class="work" data-tags="modern color light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Изумруд и золото">
+              <img src="images/emerald-gold.jpg" width="900" height="1600" loading="lazy" alt="Прямая кухня изумрудного цвета с золотой отделкой и пеналом-витриной">
+            </button>
+            <h3>Изумруд и золото</h3><p>Прямая кухня · пенал-витрина</p>
+          </li>
+          <li class="work" data-tags="modern light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Прямая кухня во всю стену">
+              <img src="images/long-grey-cream-marble.jpg" width="1600" height="1200" loading="lazy" alt="Длинная прямая кухня в сером и кремовом цвете с мраморным фартуком и двумя витринами">
+            </button>
+            <h3>Кухня во всю стену</h3><p>Серый и крем · мраморный фартук</p>
+          </li>
+          <li class="work" data-tags="classic light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Классика с патиной">
+              <img src="images/classic-gold-patina.jpg" width="1600" height="1200" loading="lazy" alt="Угловая классическая кухня с фрезерованными фасадами, золотой патиной и витринами из дуба">
+            </button>
+            <h3>Классика с патиной</h3><p>Угловая кухня · золотая патина</p>
+          </li>
+          <li class="work" data-tags="modern color light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Мятная кухня">
+              <img src="images/mint-green-showcases.jpg" width="1600" height="1200" loading="lazy" alt="Угловая кухня мятного цвета с высокими стеклянными витринами из дуба и подсветкой потолка">
+            </button>
+            <h3>Мятная кухня</h3><p>Угловая кухня · две высокие витрины</p>
+          </li>
+          <li class="work" data-tags="modern light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Графит, дерево и дымчатое стекло">
+              <img src="images/graphite-oak-smoked-glass.jpg" width="1600" height="1200" loading="lazy" alt="Угловая кухня в графитовом цвете с деревом и дымчатыми стеклянными витринами под потолком">
+            </button>
+            <h3>Графит, дерево и дымчатое стекло</h3><p>Угловая кухня · витрины под потолком</p>
+          </li>
+          <li class="work" data-tags="classic color">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Оливковая классика">
+              <img src="images/olive-classic.jpg" width="1600" height="1200" loading="lazy" alt="Прямая кухня оливкового цвета с классическими фрезерованными фасадами и чёрными стеклянными шкафами">
+            </button>
+            <h3>Оливковая классика</h3><p>Прямая кухня · фрезерованные фасады</p>
+          </li>
+          <li class="work" data-tags="modern light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Светлый беж и дуб">
+              <img src="images/beige-oak-niches.jpg" width="1600" height="1200" loading="lazy" alt="Угловая кухня светлого бежевого цвета с двумя подсвеченными витринами и высоким пеналом из дуба">
+            </button>
+            <h3>Светлый беж и дуб</h3><p>Угловая кухня · подсветка витрин</p>
+          </li>
+          <li class="work" data-tags="classic light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Белая классика с колоннами">
+              <img src="images/classic-white-columns.jpg" width="1600" height="1200" loading="lazy" alt="Белая классическая кухня с колоннами, золотым декором и карнизами">
+            </button>
+            <h3>Белая классика с колоннами</h3><p>Угловая кухня · карнизы и золотой декор</p>
+          </li>
+          <li class="work" data-tags="modern light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Графитовый пенал-витрина">
+              <img src="images/graphite-showcase-tower.jpg" width="960" height="1280" loading="lazy" alt="Графитовый шкаф-витрина с подсветкой, нишей под технику и встроенным холодильником">
+            </button>
+            <h3>Пенал-витрина под технику</h3><p>Графит · дуб · подсветка</p>
+          </li>
+          <li class="work" data-tags="modern">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Тёплый мокко, П-образная кухня">
+              <img src="images/mocha-u-shaped.jpg" width="1200" height="1600" loading="lazy" alt="П-образная кухня тёплого цвета мокко с подсветкой рабочей зоны и встроенной духовкой">
+            </button>
+            <h3>Тёплый мокко</h3><p>П-образная кухня · подсветка рабочей зоны</p>
+          </li>
+          <li class="work" data-tags="modern light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Капучино и стеклянная витрина">
+              <img src="images/cappuccino-glass-showcase.jpg" width="1280" height="960" loading="lazy" alt="Угловая кухня цвета капучино с высокой стеклянной витриной и встроенной техникой">
+            </button>
+            <h3>Капучино и стеклянная витрина</h3><p>Угловая кухня · встроенная техника</p>
+          </li>
+          <li class="work" data-tags="modern">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Светлая кухня с золотой линией">
+              <img src="images/light-grey-gold-line.jpg" width="1600" height="1200" loading="lazy" alt="Большая угловая кухня в светло-сером цвете с золотой вставкой между шкафами">
+            </button>
+            <h3>Светлая кухня с золотой линией</h3><p>Большая угловая кухня</p>
+          </li>
+          <li class="work" data-tags="modern light">
+            <button type="button" class="work-btn" aria-label="Открыть фото: Белая кухня с чёрной столешницей">
+              <img src="images/white-black-top-grille.jpg" width="1200" height="1600" loading="lazy" alt="Угловая белая кухня с чёрной столешницей, декоративными решётками на батарею и подсвеченной витриной">
+            </button>
+            <h3>Белая кухня с чёрной столешницей</h3><p>Угловая кухня · решётки на батарею</p>
+          </li>
+        </ul>
+
+        <p class="gallery-cta reveal">Хотите так же? <a href="#contact">Отправьте нам фото или размеры</a> — мы посчитаем стоимость.</p>
+      </div>
+    </section>
+
+    <!-- ===== Как работаем ===== -->
+    <section class="section section-sand" id="process">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Как мы работаем</p>
+          <h2>От заявки до готовой кухни — <em>пять понятных шагов</em></h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Заявка</h3>
+            <p>Расскажите, что нужно, и пришлите фото или размеры помещения — в WhatsApp или по телефону.</p>
+          </li>
+          <li class="step reveal" style="--d:.06s">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Замер</h3>
+            <p>Мастер приезжает, замеряет помещение и обсуждает с вами планировку, технику и материалы.</p>
+          </li>
+          <li class="step reveal" style="--d:.12s">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Проект и смета</h3>
+            <p>Готовим проект и точный расчёт. Вносим правки, пока результат вас полностью не устроит.</p>
+          </li>
+          <li class="step reveal" style="--d:.18s">
+            <span class="step-num" aria-hidden="true">4</span>
+            <h3>Изготовление</h3>
+            <p>Подписываем договор и запускаем мебель в работу. Все детали делаются по вашим размерам.</p>
+          </li>
+          <li class="step reveal" style="--d:.24s">
+            <span class="step-num" aria-hidden="true">5</span>
+            <h3>Установка</h3>
+            <p>Доставляем и монтируем. Вам остаётся принять готовую мебель и пользоваться ею.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Вопросы ===== -->
+    <section class="section" id="faq">
+      <div class="wrap faq-grid">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Частые вопросы</p>
+          <h2>Отвечаем <em>заранее</em></h2>
+          <p class="section-lead">Не нашли ответ? Напишите нам — расскажем всё лично.</p>
+        </header>
+
+        <div class="faq reveal">
+          <details>
+            <summary>Сколько стоит кухня на заказ?</summary>
+            <p>Цена зависит от размеров, материала фасадов и столешницы, фурнитуры и встроенной техники. Пришлите размеры или фото помещения — мы рассчитаем предварительную стоимость, а точную назовём после замера.</p>
+          </details>
+          <details>
+            <summary>Можно заказать, если ремонт ещё не закончен?</summary>
+            <p>Да. Часто мы замеряем помещение на этапе чистовой отделки, чтобы учесть плитку, розетки и коммуникации. Подскажем, когда лучше сделать замер.</p>
+          </details>
+          <details>
+            <summary>Сколько времени занимает изготовление?</summary>
+            <p>Срок зависит от сложности проекта и загрузки производства. Точную дату мы называем до подписания договора и фиксируем в нём.</p>
+          </details>
+          <details>
+            <summary>Можно выбрать свой цвет и материалы?</summary>
+            <p>Да. Фасады бывают матовые, глянцевые, рифлёные, с фрезеровкой и патиной; столешницы — под камень, мрамор или дерево. Покажем образцы и поможем выбрать сочетание.</p>
+          </details>
+          <details>
+            <summary>Вы встроите технику, которую я уже купил(а)?</summary>
+            <p>Да. Пришлите модели или размеры техники, и мы заранее спроектируем места под неё — холодильник, духовку, микроволновку, посудомойку.</p>
+          </details>
+          <details>
+            <summary>Вы делаете мебель только для кухни?</summary>
+            <p>Нет. Кроме кухонь мы делаем витрины, пеналы и другую корпусную мебель на заказ. Опишите задачу — скажем, что можем предложить.</p>
+          </details>
+          <details>
+            <summary>Какие гарантии вы даёте?</summary>
+            <p>Условия гарантии прописываются в договоре. Подробно расскажем о них на консультации.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Заявка и контакты ===== -->
+    <section class="section section-dark contact" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Свяжитесь с нами</p>
+          <h2>Рассчитаем вашу <em>мебель</em></h2>
+          <p class="section-lead">Оставьте заявку — мы свяжемся, уточним детали и подготовим предварительный расчёт. Можно сразу приложить фото помещения в WhatsApp.</p>
+
+          <ul class="contact-list">
+            <li data-contact-row="phone">
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+              <span><small>Телефон</small><a data-contact="phone" href="#"></a></span>
+            </li>
+            <li data-contact-row="whatsapp">
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1112 20a8 8 0 01-3.8-1L4 20z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+              <span><small>WhatsApp</small><a data-contact="whatsapp" href="#" target="_blank" rel="noopener">Написать в WhatsApp</a></span>
+            </li>
+            <li data-contact-row="instagram">
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.8" cy="7.2" r="1" fill="currentColor"/></svg></span>
+              <span><small>Instagram</small><a data-contact="instagram" href="#" target="_blank" rel="noopener"></a></span>
+            </li>
+            <li data-contact-row="city">
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+              <span><small>Где мы работаем</small><b data-contact="city"></b></span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="leadForm" novalidate style="--d:.08s">
+          <h3>Заявка на расчёт</h3>
+
+          <fieldset class="field">
+            <legend>Что вам нужно?</legend>
+            <div class="choice-row">
+              <label class="choice"><input type="radio" name="type" value="Кухня" checked><span>Кухня</span></label>
+              <label class="choice"><input type="radio" name="type" value="Витрина / пенал"><span>Витрина / пенал</span></label>
+              <label class="choice"><input type="radio" name="type" value="Другая мебель"><span>Другая мебель</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field" id="layoutField">
+            <legend>Планировка кухни</legend>
+            <div class="choice-row">
+              <label class="choice choice-shape"><input type="radio" name="layout" value="Прямая"><span><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M5 20h30" /></svg>Прямая</span></label>
+              <label class="choice choice-shape"><input type="radio" name="layout" value="Угловая"><span><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M8 6v14h27" /></svg>Угловая</span></label>
+              <label class="choice choice-shape"><input type="radio" name="layout" value="П-образная"><span><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M8 6v14h24V6" /></svg>П-образная</span></label>
+              <label class="choice choice-shape"><input type="radio" name="layout" value="Пока не знаю" checked><span><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M15 9a5 5 0 119 2c-1.5 2-4 2.5-4 5M20 21v.5" /></svg>Не знаю</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field-pair">
+            <label class="field">
+              <span class="label">Ваше имя</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться" required>
+            </label>
+            <label class="field">
+              <span class="label">Телефон</span>
+              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Ваш номер" required>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="label">Комментарий <em>(необязательно)</em></span>
+            <textarea name="comment" rows="3" placeholder="Размеры, цвет, техника, пожелания. Фото можно отправить в WhatsApp позже."></textarea>
+          </label>
+
+          <p id="formMsg" role="alert" hidden></p>
+
+          <button class="btn btn-accent btn-lg btn-block" type="submit">Отправить заявку в WhatsApp</button>
+          <p class="form-note">Нажмите кнопку — откроется WhatsApp с уже готовым сообщением. Останется только отправить.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26"><rect x="6" y="6" width="9" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="6" width="9" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <span class="brand-name" data-brand>Мебель на заказ</span>
+      </a>
+      <p>© <span id="year"></span> <span data-brand>Мебель на заказ</span>. Кухни и мебель на заказ.</p>
+    </div>
+  </footer>
+
+  <!-- Быстрые кнопки на телефоне -->
+  <div class="mobile-cta" id="mobileCta" hidden>
+    <a class="btn btn-ghost-dark" data-contact="phone" data-keep-text href="#">Позвонить</a>
+    <a class="btn btn-accent" data-contact="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+
+  <!-- Просмотр фото -->
+  <dialog class="lightbox" id="lightbox" aria-label="Просмотр фото">
+    <button class="lb-btn lb-close" type="button" aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Предыдущее фото">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="lb-btn lb-next" type="button" aria-label="Следующее фото">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <figure class="lb-figure">
+      <img class="lb-img" alt="">
+      <figcaption class="lb-caption"><b></b><span></span></figcaption>
+    </figure>
+    <div class="lb-count" aria-live="polite"></div>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
